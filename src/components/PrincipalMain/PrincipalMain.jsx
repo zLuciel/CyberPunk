@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-//import hoverEffect from 'hover-effect'
+import hoverEffect from 'hover-effect'
 import { Power3 } from "gsap/dist/gsap";
 import Image from "next/legacy/image";
 import svgAr from "/public/AR.svg"
@@ -16,6 +16,7 @@ import EtiquetaSvg from "../EtiquetSvg/EtiquetaSvg";
 
 const PrincipalMain = () => {
   const imgRef = useRef(null);
+  const imgEfectRef = useRef(null);
   const imgRef2 = useRef(null);
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
@@ -51,19 +52,21 @@ const PrincipalMain = () => {
     });
   }, []);
 
-  /*useEffect(() => {
-      const Efectohover = async ()=>{
-         const Effect = new hoverEffect({
-        parent: document.querySelector('.img-1-main'),
+  useEffect(() => {
+         const effect = new hoverEffect({
+        parent: document.querySelector(".img-2-main"),
         intensity: 0.2, // ajusta los valores según tus necesidades
-        image1: "/vr1.jpg", // ruta a la primera imagen
-        image2: "/dispar.jfif" , // ruta a la segunda imagen
+        image1: "/vr2.jpg", // ruta a la primera imagen
+        image2: "/disparo.jfif" , // ruta a la segunda imagen
         displacementImage: "/diss.png",
-       imagesRatio: 1080 / 1920,
+        imagesRatio: 658/438,
       });
-      }
-      Efectohover()
-  }, []);*/
+      
+    return () => {
+    effect.remove();
+  };
+
+  }, []);
 
   return (
     <div className=" grid-main">
@@ -72,11 +75,11 @@ const PrincipalMain = () => {
       </div>
 
       <div className="text-info-main" ref={descriptionRef}>
-        <h3>
+        <h2>
           IN AN INDUSTRY WHERE SEEMINGLY <p>EVERYTHING HAS</p> ALREADY BEEN SAID
           <span className="chine">ドセット</span> <br /> SEEKS TO COMMENT MORE
           THAN STATE.
-        </h3>
+        </h2>
         <div className="circle">
          <Image
          alt="AR"
@@ -89,26 +92,24 @@ const PrincipalMain = () => {
 
       <div className="img-1-main" ref={imgRef}>
       <div className="etiqueta"><EtiquetaSvg  texto="407" size={18} /></div>
-        {
+        
           <Image
             width={689}
             height={408}
-            objectFit="cover"
             alt="imagenrv"
-            src={Vr2}
+            src={Vr2}  
           />
-        }
       </div>
 
       <div className="img-2-main" ref={imgRef2}>
       <div className="etiqueta2"><EtiquetaSvg  texto="80-A45" size={15} /></div>
-        <Image
+        {/*<Image
           width={438}
           height={658}
-          objectFit="cover"
           alt="imagenrv"
+          layout="responsive"
           src={Vr}
-        />
+        />*/}
       </div>
     </div>
   );

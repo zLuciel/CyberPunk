@@ -55,10 +55,8 @@ font-weight: 400;
   color: #ffe300;
 }
 
-.img-1-main {
+.img-1-main { 
   position: relative; /**quitar width y heig*/
-  /* width: 689px;
-  height: 408px;*/
   justify-self: end;
   align-self: center;
   padding: 20px 0;
@@ -86,18 +84,10 @@ z-index: 10;
   height: 658px;
   width: 438px;
   justify-self: center;
-}
-
-.img-1-main > canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
   object-fit: cover;
-  object-position: top !important;
 }
 
+/**Responsive aqui*/
 @media (max-width: 1505px) {
   .title-main > h1 {
     font-size: 6rem;
