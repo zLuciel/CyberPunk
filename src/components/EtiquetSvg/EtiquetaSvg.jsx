@@ -1,0 +1,14 @@
+import React from "react";
+
+const EtiquetaSvg = ({ texto,size }) => {
+  return (
+    <svg width="120" height="45" viewBox="0 0 120 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.06517V30.9036H119.277V0H4.93914L5.10468 0.150781L0 6.06517Z" fill="#D9D9D9"/>
+      <rect x="2.16797" y="5.42188" width="114.94" height="39.5783" fill="#D9D9D9"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.16992 43.3734L2.16992 8.57241L6.53332 3.25293L116.568 3.25293V36.209L110.691 43.3734L2.16992 43.3734Z" fill="#0C0C0C"/>
+      <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size={size}>{texto}</text>
+    </svg>
+  );
+};
+
+export default EtiquetaSvg;
