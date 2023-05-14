@@ -1,0 +1,21 @@
+.absolute-mar{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.MarqueContainer{
+ border-bottom: 1px solid #FFE600;
+ border-top: 1px solid #FFE600;
+ padding: 10px  0;
+}
+.title-marquee{
+    font-size: 1.5rem;
+    margin-right: 50px;
+}
+.span-resalt{
+    color: #FFE600;
+    margin-right: 20px;
+}
