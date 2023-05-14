@@ -1,7 +1,6 @@
 .grid-main {
   overflow: hidden;
   padding: 0 50px;
-  border: 0px solid red;
   display: grid;
   width: 100%;
   height: calc(100vh - 70px);
@@ -93,8 +92,10 @@
         "title title img2 "
         "textmain textmain img2"
         "img1 img1 img2";
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr max-content 3fr;
       column-gap: 10px;
+      row-gap: 25px;
+      place-content: center;
     }
     .text-info-main {
       justify-self: start;
@@ -107,12 +108,17 @@
       align-self: center;
     }
     .img-1-main{
+      max-width: 550px;
       grid-area: img1;
       justify-self: start;
-      align-self: start;
+      align-self: end;
+    }
+    .img-1-main  img{
+      width: 100%;
+      height: 100%;
     }
   }
-  @media (max-width: 1193px){
+  /*@media (max-width: 1193px){
     .title-main > h1{
       font-size: 5rem;
     }
@@ -136,4 +142,4 @@
       grid-template-rows: 1fr 300px 400px;
       column-gap: 10px;
     }
-  }
+  }*/
