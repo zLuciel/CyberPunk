@@ -16,7 +16,6 @@ import EtiquetaSvg from "../EtiquetSvg/EtiquetaSvg";
 
 const PrincipalMain = () => {
   const imgRef = useRef(null);
-  const imgEfectRef = useRef(null);
   const imgRef2 = useRef(null);
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
@@ -54,8 +53,8 @@ const PrincipalMain = () => {
 
   useEffect(() => {
          const effect = new hoverEffect({
-        parent: document.querySelector(".img-2-main"),
-        intensity: 0.2, // ajusta los valores según tus necesidades
+        parent: imgRef2.current,
+        intensity: 0.3, // ajusta los valores según tus necesidades
         image1: "/vr2.jpg", // ruta a la primera imagen
         image2: "/disparo.jfif" , // ruta a la segunda imagen
         displacementImage: "/diss.png",
