@@ -17,6 +17,7 @@ import EtiquetaSvg from "../EtiquetSvg/EtiquetaSvg";
 const PrincipalMain = () => {
   const imgRef = useRef(null);
   const imgRef2 = useRef(null);
+  const imgRef3 = useRef(null);
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
 
@@ -70,9 +71,18 @@ const PrincipalMain = () => {
         displacementImage: "/diss.png",
         imagesRatio: 658/438,
       });
-      
+      const effect2 = new hoverEffect({
+        parent: imgRef.current,
+        intensity: 0.3, // ajusta los valores según tus necesidades
+        image1: "/vr1.jpg", // ruta a la primera imagen
+        image2: "/cascovr.jfif" , // ruta a la segunda imagen
+        displacementImage: "/diss.png",
+        imagesRatio: 408/689,
+        
+      });
     return () => {
     effect.remove();
+    effect2.remove();
   };
 
   }, []);
@@ -105,6 +115,7 @@ const PrincipalMain = () => {
       <div className="etiqueta"><EtiquetaSvg  texto="407" size={18} /></div>
         
           <Image
+          ref={imgRef3}
           className="glitch-image no-animation"
             width={689}
             height={408}

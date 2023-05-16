@@ -141,7 +141,12 @@
 	filter:hue-rotate(360deg);
 	}
 }*/
-
+.img-1-main canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
 
 
 
