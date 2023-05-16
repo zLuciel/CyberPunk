@@ -22,13 +22,18 @@ const PrincipalMain = () => {
 
   useEffect(() => {
     // Animación con GSAP
-    gsap.from(imgRef.current, {
+    const animation = gsap.from(imgRef.current, {
       opacity: 0,
       duration: 1.8,
       y: 250,
       ease: Power3.easeOut,
       delay: 0.2,
+      onComplete: () => {
+        // Eliminar estilos en línea
+        imgRef.current.removeAttribute("style");
+      },
     });
+  
     gsap.from(imgRef2.current, {
       opacity: 0,
       duration: 1.8,
@@ -49,7 +54,12 @@ const PrincipalMain = () => {
       ease: Power3.easeOut,
       delay: 0.2,
     });
+  
+   /* return () => {
+      animation.kill();
+    };*/
   }, []);
+  
 
   useEffect(() => {
          const effect = new hoverEffect({
@@ -67,6 +77,8 @@ const PrincipalMain = () => {
 
   }, []);
 
+
+  
   return (
     <div className=" grid-main">
       <div className="title-main" ref={titleRef}>
@@ -89,14 +101,15 @@ const PrincipalMain = () => {
         </div>
       </div>
 
-      <div className="img-1-main" ref={imgRef}>
+      <div className="img-1-main glitch" ref={imgRef} >
       <div className="etiqueta"><EtiquetaSvg  texto="407" size={18} /></div>
         
           <Image
+          className="glitch-image no-animation"
             width={689}
             height={408}
             alt="imagenrv"
-            src={Vr2}  
+            src={Vr2} 
           />
       </div>
 
