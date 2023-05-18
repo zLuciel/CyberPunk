@@ -1,0 +1,94 @@
+.container-col2 {
+  overflow: hidden;
+  position: relative;
+  background: rgba(3, 3, 3, 0.3);
+  /*justify-self: center;
+  align-self: center;*/
+}
+.title-abs {
+  position: absolute;
+  font-family: "Bruno Ace SC";
+  font-style: normal;
+  font-weight: 400;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  -webkit-text-stroke: 0.5px #ffe300;
+  color: transparent;
+  z-index: 1;
+  white-space: nowrap;
+}
+.flex {
+  height: 100%;
+  display: grid;
+  grid-row: 1fr 1fr;
+  place-content: center;
+}
+.flex-skew {
+  display: flex;
+  gap: 10px;
+}
+
+.flex-skew > .skew {
+  cursor: pointer;
+  transform: skew(50deg, 0deg);
+  width: 58px;
+  height: 6px;
+}
+.active {
+  background: #ffe300;
+}
+.desactive {
+  background: gray;
+}
+
+.flex-span-col2 {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-span-col2 > .yellow {
+  color: #ffe300;
+}
+.ContainerFlex {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  padding-left: 51px;
+  gap: 10px;
+  justify-self: center;
+  align-self: center;
+}
+
+.ContainerImg {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  max-width: 600px;
+}
+
+.img-absolute {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+.img-absolute > span {
+  transform: rotate(-90deg);
+  font-family: "Bruno Ace SC";
+  font-style: normal;
+  font-weight: 400;
+}
+.linea {
+  width: 2px;
+  height: 70%;
+  background: rgba(128, 128, 128, 0.336);
+}
+
+
+
+.flex-img-swiper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }

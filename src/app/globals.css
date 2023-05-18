@@ -59,6 +59,7 @@ body {
   position: relative;
   color: white;
   background: #101010;
+  background: #0D0C0C;
 }
 
 a {
@@ -70,8 +71,11 @@ a {
 
 .BgRobot{
   z-index: -1;
-  position: absolute;
+  position: fixed;
   width: 100%;
   min-height: 100vh;
   background:  url(/robot.jpg) center center/cover no-repeat;
+  background-attachment: fixed;
+  filter: brightness(60%);
 }
+

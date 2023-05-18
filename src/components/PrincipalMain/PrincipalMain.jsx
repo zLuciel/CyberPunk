@@ -13,6 +13,7 @@ import Vr4 from "@/assets/diss.png";
 import Robot from "public/robot.jpg";
 import "./css/PrincipalMain.css";
 import EtiquetaSvg from "../EtiquetSvg/EtiquetaSvg";
+import Marquees from "../marquee/Marquee";
 
 const PrincipalMain = () => {
   const imgRef = useRef(null);
@@ -91,6 +92,7 @@ const PrincipalMain = () => {
   
   return (
     <div className=" grid-main">
+      <Marquees/>
       <div className="title-main" ref={titleRef}>
         <h1>Vr Coggles</h1>
       </div>

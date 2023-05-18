@@ -1,0 +1,21 @@
+
+.grid-information{
+padding: 0 20px;
+position: relative;
+height: 100vh;
+width: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 18px;
+}
+.bgpuntos{
+    display: none;
+    z-index: -1;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background:  url(/puntos.png) center center/cover no-repeat;
+    background-attachment: fixed;
+}
