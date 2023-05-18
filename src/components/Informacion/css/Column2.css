@@ -2,6 +2,7 @@
   overflow: hidden;
   position: relative;
   background: rgba(3, 3, 3, 0.3);
+  padding: 0 10px ;
   /*justify-self: center;
   align-self: center;*/
 }
@@ -20,21 +21,24 @@
   white-space: nowrap;
 }
 .flex {
+  width: 100%;
   height: 100%;
   display: grid;
-  grid-row: 1fr 1fr;
   place-content: center;
 }
 .flex-skew {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(7,minmax(40px,1fr));
+  grid-template-rows: minmax(4px,6px);
   gap: 10px;
+  place-content: center;
 }
 
 .flex-skew > .skew {
   cursor: pointer;
   transform: skew(50deg, 0deg);
-  width: 58px;
-  height: 6px;
+ /* width: 58px;
+  height: 6px;*/
 }
 .active {
   background: #ffe300;
@@ -46,18 +50,18 @@
 .flex-span-col2 {
   display: flex;
   justify-content: space-between;
+  
 }
 .flex-span-col2 > .yellow {
   color: #ffe300;
 }
 .ContainerFlex {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 0;
+  display: grid;
+  grid-template-columns: max-content;
+  grid-template-rows: 1fr 1fr;
   padding-left: 51px;
   gap: 10px;
-  justify-self: center;
-  align-self: center;
+  place-content: center;
 }
 
 .ContainerImg {
@@ -89,6 +93,7 @@
 
 .flex-img-swiper{
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   }
