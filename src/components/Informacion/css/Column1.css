@@ -4,6 +4,7 @@
    display: flex;
    flex-direction: column;
    row-gap: 20px;
+   padding: 0 20px;
 }
 .container-col1 > h2 ,.container-col1 > p{
     font-family: 'Bruno Ace SC';
@@ -22,14 +23,37 @@
 }
 .video-youtube{
     max-width: 714px;
-    height: 407px;
+    max-height: 407px;
 }
 .video-youtube > video{
     width: 100%;
     height: 100%;
 }
+
+/**Responsive aqui*/
 @media (max-width: 1141px){
     .container-col1{
-        display: none;
+       justify-content: center;
+       align-items: center;
+    }
+    .container-col1 > p{
+        text-align: center;
+    }
+}
+
+@media (max-width: 543px){
+    .container-col1 > h2 {
+        font-size: 3rem;
+    }
+    .container-col1 > p{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 400px){
+    .container-col1 > h2 {
+        font-size: 2rem;
+    }
+    .container-col1 > p{
+        font-size: 0.8rem;
     }
 }
