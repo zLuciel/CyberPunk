@@ -102,5 +102,8 @@
   @media (max-width: 460px){
     .flex-skew {
       grid-template-columns: repeat(7,minmax(30px,1fr));
-    }   
+    }
+    .title-abs{
+      -webkit-text-stroke: 1px #ffe300;
+    }
   }
