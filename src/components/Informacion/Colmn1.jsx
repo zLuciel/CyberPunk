@@ -5,7 +5,7 @@ const Colmn1 = () => {
   return (
     <div className="container-col1">
       <div className="video-youtube">
-        <video src="/videos.mp4"  poster="/videoImg.jpg"  ></video>
+        <video src="/videos.mp4" controls  poster="/videoImg.jpg"  ></video>
       </div>
 
       <h2>Vr Coggles</h2>
