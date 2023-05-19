@@ -3,7 +3,7 @@
   position: relative;
   background: rgba(3, 3, 3, 0.3);
   padding: 0 10px ;
-  /*justify-self: center;
+ /* justify-self: center;
   align-self: center;*/
 }
 .title-abs {
@@ -21,33 +21,18 @@
   white-space: nowrap;
 }
 .flex {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
-  display: grid;
-  place-content: center;
-}
-.flex-skew {
-  display: grid;
-  grid-template-columns: repeat(7,minmax(45px,1fr));
-  grid-template-rows: minmax(4px,6px);
-  gap: 10px;
-  place-content: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.flex-skew > .skew {
-  cursor: pointer;
-  transform: skew(50deg, 0deg);
-  max-width: 40px;
- /* width: 58px;
-  height: 6px;*/
+.Container-carusel{
+width: 100%;
 }
-.active {
-  background: #ffe300;
-}
-.desactive {
-  background: gray;
-}
-
 .flex-span-col2 {
   display: flex;
   justify-content: space-between;
@@ -60,7 +45,6 @@
   display: grid;
   grid-template-columns: max-content;
   grid-template-rows: 1fr 1fr;
-  padding-left: 51px;
   gap: 10px;
   place-content: center;
 }
@@ -69,6 +53,7 @@
   display: grid;
   grid-template-columns: 80px 1fr;
   max-width: 600px;
+  
 }
 
 .img-absolute {
@@ -99,9 +84,25 @@
   align-items: center;
   }
 
-  @media (max-width: 460px){
-    .flex-skew {
-      grid-template-columns: repeat(7,minmax(30px,1fr));
+.mantine-1jkjqkp[data-active] {
+    opacity: 1;
+    background: #ffe300;
+}
+.mantine-19swgkw{
+  padding-left: 71px;
+  gap: 10px;
+ bottom: -3rem;
+}
+.mantine-19swgkw >button{
+  transform: skew(50deg, 0deg);
+  width: 50px;
+  height: 6px;
+}
+  @media (max-width: 584px){
+    .mantine-19swgkw >button{
+      transform: skew(50deg, 0deg);
+      width: 38px;
+      height: 5px;
     }
     .title-abs{
       -webkit-text-stroke: 1px #ffe300;
